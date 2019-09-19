@@ -22,7 +22,7 @@ class Categories extends React.Component {
 			{
 				this.state.categories.map(c =>
 					<IonSlide key={c.name}>
-						<IonCard style={{margin:0, width:90, boxShadow:'0px 0px'}}>
+						<IonCard onClick={() => this.props.filter(c.name)} style={{margin:0, width:90, boxShadow:'0px 0px'}}>
 							<img src={c.img} style={{marginLeft:'auto', marginRight:'auto'}}/>
 							<IonCardContent style={{padding:0}}>
 							<small>{c.name}</small>
